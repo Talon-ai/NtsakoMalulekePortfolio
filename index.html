@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntsako Maluleke | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff; 
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --accent: #007bff; /* Professional Blue accent */
+            --border: #eeeeee;
+            --card-bg: #f9f9f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 30px; }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        nav ul li a:hover { opacity: 0.6; }
+
+        /* Hero */
+        .hero { padding: 80px 0 100px 0; }
+        .hero h1 { font-size: 4rem; font-weight: 700; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.5rem; color: var(--text-muted); max-width: 700px; }
+
+        /* Sections */
+        section { padding: 80px 0; border-top: 1px solid var(--border); }
+        .section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 40px; display: block; }
+
+        /* Grid Layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        /* Project Cards */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .project-card { 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 8px; 
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+        .project-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px; }
+        .project-link { font-weight: 600; font-size: 0.85rem; color: var(--accent); text-transform: uppercase; }
+
+        /* Skills/Certificates List */
+        .list-item { margin-bottom: 25px; }
+        .list-item h4 { font-size: 1.1rem; margin-bottom: 5px; }
+        .list-item span { font-size: 0.9rem; color: var(--text-muted); }
+
+        footer { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">NM.</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero">
+            <h1>Ntsako Maluleke</h1>
+            <p>Software Engineer specializing in scalable IT systems and high-quality user experiences.</p>
+        </header>
+
+        <section id="about">
+            <span class="section-title">01 / Professional Profile</span>
+            <div class="grid-2">
+                <div>
+                    <p>Highly motivated Bachelor of Science in IT candidate with a focus on Software Engineering. Proven ability to translate complex business requirements into functional web solutions[cite: 15]
+                <div>
+                    <strong>Expertise:</strong>
+                    <p>Python, OOP, System Design, Fullstack Development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <span class="section-title">02 / Digital Work & Websites</span>
+            <div class="project-grid">
+                <a href="https://your-link-here.com" class="project-card">
+                    <span class="project-link">Live Website</span>
+                    <h3>Talon FX Website</h3>
+                    <p>Multi-page site featuring WhatsApp chat integration, booking options, and service categories for trading mentorship.</p>
+                </a>
+
+                <a href="#" class="project-card">
+                    <span class="project-link">GitHub Repo</span>
+                    <h3>Portfolio Website</h3>
+                    <p>Personal portfolio site with a responsive layout and service sections.</p>
+                </a>
+                
+                <a href="https://talon-it-solutions.vercel.app/" class="project-card" style="border: 2px dashed #ddd; background: transparent;">
+                    <p style="text-align: center; padding-top: 20px;">Talon IT Solutions Website</p>
+                </a>
+
+                <a href="https://ms-pasha-phase1.vercel.app/" class="project-card" style="border: 2px dashed #ddd; background: transparent;">
+                    <p style="text-align: center; padding-top: 20px;">Ms Phasha Website</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="education">
+            <span class="section-title">03 / Education & Certification</span>
+            <div class="grid-2">
+                <div>
+                    <div class="list-item">
+                        <h4>Bachelor of Software Engineering</h4>
+                        <span>Eduvos Private College (2024–2026)</span>
+                        <p>Currently in 3rd year of studies.</p>
+                    </div>
+                    <div class="list-item">
+                        <h4>National Senior Certificate</h4>
+                        <span>Maragon Mooikloof Highschool</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="list-item" style="background: #f0f7ff; padding: 20px; border-radius: 8px;">
+                        <h4 style="color: #0056b3;">FNB Full-stack Development Certificate</h4>
+                        <span>FNB App Academy | Aug 2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <span class="section-title">04 / Contact</span>
+            <p>Phone: 072 652 2465</p>
+            <p>Email: <a href="mailto:talonitsolutions@gmail.com" style="color: var(--text-main);">talonitsolutions@gmail.com</a></p>
+            <p>Pretoria, South Africa</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Ntsako Maluleke. Built with precision.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
